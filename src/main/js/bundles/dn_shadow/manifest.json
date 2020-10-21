@@ -1,0 +1,164 @@
+{
+    "name": "dn_shadow",
+    "version": "6.0.3-SNAPSHOT",
+    "title": "${bundleName}",
+    "description": "${bundleDescription}",
+    "vendor": "con terra GmbH",
+    "keywords": [
+        "sample"
+    ],
+    "icon": {},
+    "license": {},
+    "productName": "devnet-mapapps-shadow",
+    "dependencies": {
+        "esri": "^4.12.0",
+        "esri-widgets": "^4.8.0",
+        "map-widget": "^4.8.0",
+        "apprt-binding": "^4.8.0"
+    },
+    "CSS-Themes-Extension": [
+        {
+            "name": "*",
+            "files": [
+                "./css/styles.css"
+            ]
+        }
+    ],
+    "layout-widgets": [
+        {
+            "widgetRole": "shadowWidget",
+            "window": {
+                "title": "${windowTitle}",
+                "dockTool": "shadowToggleTool",
+                "closable": true,
+                "maximizable": true,
+                "minimizeOnClose": true,
+                "resizable": true,
+                "marginBox": {
+                    "w": 350,
+                    "h": 250,
+                    "l": 20,
+                    "t": 125
+                },
+                "minSize": {
+                    "w": 350,
+                    "h": 230
+                },
+                "windowClass": "shadow-window"
+            }
+        },
+        {
+            "widgetRole": "shadowWidget",
+            "sublayout": [
+                "mobile_landscape",
+                "mobile_portrait"
+            ],
+            "window": {
+                "dockingBar": "${id}-dockingBarBottomLeft",
+                "resizable": false,
+                "fixEdgesInViewport": {
+                    "l": true,
+                    "r": true
+                },
+                "marginBox": {
+                    "h": 230,
+                    "b": 42,
+                    "r": 0,
+                    "l": 0
+                }
+            }
+        },
+        {
+            "widgetRole": "shadowWidget",
+            "sublayout": [
+                "mobile_landscape"
+            ],
+            "window": {
+                "resizable": false,
+                "marginBox": {
+                    "h": 230,
+                    "b": 0,
+                    "r": 0,
+                    "l": 50
+                }
+            }
+        }
+    ],
+    "components": [
+        {
+            "name": "ShadowWidgetFactory",
+            "provides": [
+                "dijit.Widget",
+                "dn_shadow.ShadowWidgetFactory"
+            ],
+            "instanceFactory": true,
+            "properties": {
+                "widgetRole": "shadowWidget"
+            },
+            "references": [
+                {
+                    "name": "_mapWidgetModel",
+                    "providing": "map-widget.MapWidgetModel"
+                },
+                {
+                    "name": "_shadowWidgetController",
+                    "providing": "dn_shadow.ShadowWidgetController"
+                }
+            ]
+        },
+        {
+            "name": "Config",
+            "impl": "./ShadowWidgetController",
+            "provides": [
+                "dn_shadow.ShadowWidgetController"
+            ],
+            "properties": {
+                "widgetRole": "shadowWidget",
+                "fullEnvironment": {},
+                "timeSliderSteps": null,
+                "mode": "shadow-window",
+                "playSpeed": 2,
+                "dateOrSeason": "date",
+                "visibleElements": {
+                    "playButtons": true,
+                    "shadowsToggle": true,
+                    "datePicker": true,
+                    "timezone": false
+                }
+            },
+            "references": [
+                {
+                    "name": "_mapWidgetModel",
+                    "providing": "map-widget.MapWidgetModel"
+                }
+            ]
+        },
+        {
+            "name": "ShadowToggleTool",
+            "impl": "ct/tools/Tool",
+            "provides": [
+                "ct.tools.Tool"
+            ],
+            "propertiesConstructor": true,
+            "properties": {
+                "id": "shadowToggleTool",
+                "title": "${tool.title}",
+                "tooltip": "${tool.tooltip}",
+                "iconClass": "icon-time-clock",
+                "activateHandler": "onToolActivated",
+                "deactivateHandler": "onToolDeactivated",
+                "toolRole": "toolset",
+                "togglable": true,
+                "noGroup": true
+            },
+            "references": [
+                {
+                    "name": "handlerScope",
+                    "providing": "dn_shadow.ShadowWidgetController"
+                }
+            ]
+        }
+    ]
+}
+
+
