@@ -16,7 +16,7 @@
 module.exports = {
     root: {
         bundleName: "Dayligth",
-        bundleDescription: "This bundle enables the user to display the effect of light of certain time of day. Additionally, the shadow of 3D-Objects can be ",
+        bundleDescription: "This bundle enables the user to display the effect of light of certain time of day. Additionally, the shadow of 3D-Objects can be simulated.",
         windowTitle: "Daylight Widget",
         widget: {
             title: "Daylight",
