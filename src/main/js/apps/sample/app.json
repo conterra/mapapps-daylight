@@ -29,7 +29,7 @@
             "omnisearch",
             "locator-store",
             "popups-default",
-            "dn_shadow"
+            "dn_daylight"
         ],
         "require": [
             "${app}.app"
@@ -354,7 +354,7 @@
                         "cssClass": "ct-main-app-menu",
                         "tools": [
                             "sharelinkTool",
-                            "shadowToggleTool",
+                            "daylightToggleTool",
                             "IMPRINT_Imprint_CustomInfoTool",
                             "IMPRINT_Imprint_CustomInfoTool_mobile"
                         ],
@@ -370,7 +370,7 @@
         "toolrules": {
             "ToolActiveStateManager": {
                 "activateOnStartToolIds": [
-                    "shadowToggleTool"
+                    "daylightToggleTool"
                 ]
             }
         }

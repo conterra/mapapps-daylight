@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import Shadow from "esri/widgets/Daylight";
+import Daylight from "esri/widgets/Daylight";
 import moment from "moment";
 
-const _shadowWidget = Symbol("_shadowWidget");
+const _daylightWidget = Symbol("_daylightWidget");
 const _initialEnvironment = Symbol("_initialEnvironment");
 
-export default class ShadowWidgetFactory {
+export default class DaylightWidgetFactory {
 
     activate() {
         this._getView().then((view) => {
@@ -46,29 +46,29 @@ export default class ShadowWidgetFactory {
                 }
             };
             if (this._properties.playOnStartup) {
-                this[_shadowWidget].play();
+                this[_daylightWidget].play();
             }
         });
     }
 
     onToolDeactivated() {
-        this[_shadowWidget].stop();
+        this[_daylightWidget].stop();
         this._resetEnvironment();
     }
 
     getWidget() {
-        const shadowProperties = this.getShadowWidgetProperties();
-        return this[_shadowWidget] = new Shadow(shadowProperties);
+        const daylightProperties = this.getDaylightWidgetProperties();
+        return this[_daylightWidget] = new Daylight(daylightProperties);
     }
 
     _destroyWidget() {
-        this[_shadowWidget].destroy();
-        this[_shadowWidget] = undefined;
+        this[_daylightWidget].destroy();
+        this[_daylightWidget] = undefined;
     }
 
-    getShadowWidgetProperties() {
+    getDaylightWidgetProperties() {
         const properties = this._properties;
-        const shadowProperties = {
+        const daylightProperties = {
             dateOrSeason: properties.dateOrSeason,
             mode: properties.mode,
             playSpeedMultiplier: properties.playSpeed,
@@ -76,9 +76,9 @@ export default class ShadowWidgetFactory {
         };
         const timeSliderSteps = this._getTimeSliderSteps();
         if (timeSliderSteps) {
-            shadowProperties.timeSliderSteps = timeSliderSteps;
+            daylightProperties.timeSliderSteps = timeSliderSteps;
         }
-        return shadowProperties;
+        return daylightProperties;
     }
 
 

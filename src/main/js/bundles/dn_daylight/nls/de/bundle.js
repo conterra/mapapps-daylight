@@ -14,22 +14,18 @@
  * limitations under the License.
  */
 module.exports = {
-    root: {
-        bundleName: "Shadow",
-        bundleDescription: "This bundle enables the user to display the shadow of 3D-Objects to a certain time of day.",
-        windowTitle: "Shadow Widget",
-        widget: {
-            title: "Schatten",
-            tooltip: "Schatten",
-            showshadow:"Show shadow",
-            daytime:"Time of Day",
-            morning: "Morning",
-            noon: "Noon",
-            afternoon: "Afternoon",
-            evening: "Evening",
-            time: "Time"
-
-        }
-    },
-    de: true
-};
+    bundleName: "Tageslicht",
+    bundleDescription: "Das Bundle ermöglicht dem Nutzer verschiedene Tageszeiten zu simulieren. Zusätzlich können Schatten für 3D-Objekte angezeigt werden.",
+    windowTitle: "Tageslicht Widget",
+    widget:{
+        title: "Tageslicht",
+        tooltip: "Tageslicht",
+        showshadow:"Schatten anzeigen",
+        daytime:"Tageszeit",
+        morning: "Morgen",
+        noon: "Mittag",
+        afternoon: "Nachmittag",
+        evening: "Abend",
+        time: "Zeit"
+    }
+}

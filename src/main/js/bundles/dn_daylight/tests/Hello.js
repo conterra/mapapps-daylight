@@ -13,7 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import ".";
-import "./ShadowWidgetFactory";
-import "./ShadowWidgetController";
-import "ct/tools/Tool";
+import registerSuite from "intern!object";
+import assert from "intern/chai!assert";
+import md from "module";
+import Hello from "../DaylightWidgetFactory";
+
+let createHello = function (msg) {
+    let hello = new Hello();
+    hello._properties = {message: msg};
+    hello.activate();
+    return hello;
+};
+
+registerSuite({
+    name: md.id,
+    "expect properties.message is returned by getMessage": function () {
+        assert.equal(createHello("hello world").getMessage(), "hello world");
+    }
+});

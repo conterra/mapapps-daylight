@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.ctAppRoot .shadow-window .dijitDialogPaneContent {
+.ctAppRoot .daylight-window .dijitDialogPaneContent {
     padding: 0;
 }
 
@@ -80,15 +80,15 @@
     background-color: rgba(110, 110, 110, 0.4);
 }
 
-.ctAppRoot.everlasting .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-0 {
+.ctAppRoot.everlasting .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-0 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 
-.ctAppRoot.everlasting .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-1 {
+.ctAppRoot.everlasting .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-1 {
     background-color: #12a5f4;
 }
 
-.ctAppRoot.everlasting .esri-time.esri-slider__mode--shadow-window .esri-slider__segment-2 {
+.ctAppRoot.everlasting .esri-time.esri-slider__mode--daylight-window .esri-slider__segment-2 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 
@@ -122,11 +122,11 @@
     background-color: rgba(110, 110, 110, 0.4);
 }
 
-.ctAppRoot.autumn .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-1 {
+.ctAppRoot.autumn .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-1 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 
-.ctAppRoot.autumn .esri--slider.esri-slider__mode--shadow-window .esri-slider__segment-0 {
+.ctAppRoot.autumn .esri--slider.esri-slider__mode--daylight-window .esri-slider__segment-0 {
     background-color: #2980b9;
 }
 
@@ -135,7 +135,7 @@
     background-color: #2980b9;
 }
 
-.ctAppRoot.autumn .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-2 {
+.ctAppRoot.autumn .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-2 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 
@@ -164,11 +164,11 @@
     background-color: rgba(110, 110, 110, 0.4);
 }
 
-.ctAppRoot.spring .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-1 {
+.ctAppRoot.spring .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-1 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 
-.ctAppRoot.spring .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-0 {
+.ctAppRoot.spring .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-0 {
     background-color: #16a085;
 }
 
@@ -177,7 +177,7 @@
     background-color: #16a085;
 
 }
-.ctAppRoot.spring .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-2 {
+.ctAppRoot.spring .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-2 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 
@@ -206,15 +206,15 @@
     background-color: rgba(110, 110, 110, 0.4);
 }
 
-.ctAppRoot.summer .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-1 {
+.ctAppRoot.summer .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-1 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 
-.ctAppRoot.summer .esri-slider.esri-slider__mode--tshadow-window .esri-slider__segment-0 {
+.ctAppRoot.summer .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-0 {
     background-color: #8c0f1a;
 }
 
-.ctAppRoot.summer .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-2 {
+.ctAppRoot.summer .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-2 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 
@@ -250,7 +250,7 @@
     background-color: rgba(110, 110, 110, 0.4);
 }
 
-.ctAppRoot.winter .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-1 {
+.ctAppRoot.winter .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-1 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 
@@ -264,7 +264,7 @@
 
 }
 
-.ctAppRoot.winter .esri-slider.esri-slider__mode--shadow-window .esri-slider__segment-2 {
+.ctAppRoot.winter .esri-slider.esri-slider__mode--daylight-window .esri-slider__segment-2 {
     background-color: rgba(110, 110, 110, 0.4);
 }
 

@@ -13,21 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import registerSuite from "intern!object";
-import assert from "intern/chai!assert";
-import md from "module";
-import Hello from "../ShadowWidgetFactory";
+module.exports = {
+    root: {
+        bundleName: "Dayligth",
+        bundleDescription: "This bundle enables the user to display the effect of light of certain time of day. Additionally, the shadow of 3D-Objects can be ",
+        windowTitle: "Daylight Widget",
+        widget: {
+            title: "Daylight",
+            tooltip: "Daylight",
+            showshadow:"Show shadow",
+            daytime:"Time of Day",
+            morning: "Morning",
+            noon: "Noon",
+            afternoon: "Afternoon",
+            evening: "Evening",
+            time: "Time"
 
-let createHello = function (msg) {
-    let hello = new Hello();
-    hello._properties = {message: msg};
-    hello.activate();
-    return hello;
+        }
+    },
+    de: true
 };
-
-registerSuite({
-    name: md.id,
-    "expect properties.message is returned by getMessage": function () {
-        assert.equal(createHello("hello world").getMessage(), "hello world");
-    }
-});

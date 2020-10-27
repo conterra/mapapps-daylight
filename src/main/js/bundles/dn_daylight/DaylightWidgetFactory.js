@@ -18,7 +18,7 @@ import Binding from "apprt-binding/Binding";
 
 const _binding = Symbol("_binding");
 
-export default class ShadowWidgetFactory {
+export default class DaylightWidgetFactory {
 
     deactivate() {
         this._deactivateBinding();
@@ -29,16 +29,16 @@ export default class ShadowWidgetFactory {
     }
 
     _getWidget() {
-        const shadowWidget = this._shadowWidgetController.getWidget();
+        const daylightWidget = this._daylightWidgetController.getWidget();
         const mapWidgetModel = this._mapWidgetModel;
-        const binding = this[_binding] = Binding.for(shadowWidget, mapWidgetModel)
+        const binding = this[_binding] = Binding.for(daylightWidget, mapWidgetModel)
             .syncToLeft("view")
             .enable()
             .syncToLeftNow();
 
-        shadowWidget.own(binding);
+        daylightWidget.own(binding);
 
-        return new EsriDijit(shadowWidget);
+        return new EsriDijit(daylightWidget);
     }
 
     _deactivateBinding() {

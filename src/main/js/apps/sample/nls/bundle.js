@@ -15,7 +15,7 @@
  */
 module.exports = {
     root: {
-        apptitle: "Shadow Sample",
+        apptitle: "Daylight Sample",
         map: {}
     },
     "de": true

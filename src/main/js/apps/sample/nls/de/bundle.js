@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 module.exports = {
-    apptitle: "Shadow Sample",
+    apptitle: "Daylight Sample",
     map: {}
 };

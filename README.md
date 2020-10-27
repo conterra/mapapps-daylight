@@ -42,7 +42,7 @@ dn_shadow": {
  |                  }             |         |                      |                       |                                                                        |                                           |
 
 
-
+For more information concerning the properties refer to the documentation of the esri widget: https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Daylight.html
 ## Development Guide
 ### Define the mapapps remote base
 Before you can run the project you have to define the mapapps.remote.base property in the pom.xml-file:

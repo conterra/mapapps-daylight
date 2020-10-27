@@ -13,19 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-module.exports = {
-    bundleName: "Schatten",
-    bundleDescription: "Das Bundle ermöglicht den Nutzer 3D-Objekte zu einer bestimmten Tageszeit anzeigen zu lassen.",
-    windowTitle: "Schatten Widget",
-    widget:{
-        title: "Schatten",
-        tooltip: "Schatten",
-        showshadow:"Schatten anzeigen",
-        daytime:"Tageszeit",
-        morning: "Morgen",
-        noon: "Mittag",
-        afternoon: "Nachmittag",
-        evening: "Abend",
-        time: "Zeit"
-    }
-}
+import ".";
+import "./DaylightWidgetFactory";
+import "./DaylightWidgetController";
+import "ct/tools/Tool";

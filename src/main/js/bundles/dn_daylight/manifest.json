@@ -1,5 +1,5 @@
 {
-    "name": "dn_shadow",
+    "name": "dn_daylight",
     "version": "6.0.3-SNAPSHOT",
     "title": "${bundleName}",
     "description": "${bundleDescription}",
@@ -9,7 +9,7 @@
     ],
     "icon": {},
     "license": {},
-    "productName": "devnet-mapapps-shadow",
+    "productName": "devnet-mapapps-daylight",
     "dependencies": {
         "esri": "^4.12.0",
         "esri-widgets": "^4.8.0",
@@ -26,10 +26,10 @@
     ],
     "layout-widgets": [
         {
-            "widgetRole": "shadowWidget",
+            "widgetRole": "daylightWidget",
             "window": {
                 "title": "${windowTitle}",
-                "dockTool": "shadowToggleTool",
+                "dockTool": "daylightToggleTool",
                 "closable": true,
                 "maximizable": true,
                 "minimizeOnClose": true,
@@ -44,11 +44,11 @@
                     "w": 350,
                     "h": 230
                 },
-                "windowClass": "shadow-window"
+                "windowClass": "daylight-window"
             }
         },
         {
-            "widgetRole": "shadowWidget",
+            "widgetRole": "daylightWidget",
             "sublayout": [
                 "mobile_landscape",
                 "mobile_portrait"
@@ -69,7 +69,7 @@
             }
         },
         {
-            "widgetRole": "shadowWidget",
+            "widgetRole": "daylightWidget",
             "sublayout": [
                 "mobile_landscape"
             ],
@@ -86,14 +86,14 @@
     ],
     "components": [
         {
-            "name": "ShadowWidgetFactory",
+            "name": "DaylightWidgetFactory",
             "provides": [
                 "dijit.Widget",
-                "dn_shadow.ShadowWidgetFactory"
+                "dn_daylight.DaylightWidgetFactory"
             ],
             "instanceFactory": true,
             "properties": {
-                "widgetRole": "shadowWidget"
+                "widgetRole": "daylightWidget"
             },
             "references": [
                 {
@@ -101,22 +101,22 @@
                     "providing": "map-widget.MapWidgetModel"
                 },
                 {
-                    "name": "_shadowWidgetController",
-                    "providing": "dn_shadow.ShadowWidgetController"
+                    "name": "_daylightWidgetController",
+                    "providing": "dn_daylight.DaylightWidgetController"
                 }
             ]
         },
         {
             "name": "Config",
-            "impl": "./ShadowWidgetController",
+            "impl": "./DaylightWidgetController",
             "provides": [
-                "dn_shadow.ShadowWidgetController"
+                "dn_daylight.DaylightWidgetController"
             ],
             "properties": {
-                "widgetRole": "shadowWidget",
+                "widgetRole": "daylightWidget",
                 "fullEnvironment": {},
                 "timeSliderSteps": null,
-                "mode": "shadow-window",
+                "mode": "daylight-window",
                 "playSpeed": 2,
                 "dateOrSeason": "date",
                 "visibleElements": {
@@ -134,14 +134,14 @@
             ]
         },
         {
-            "name": "ShadowToggleTool",
+            "name": "DaylightToggleTool",
             "impl": "ct/tools/Tool",
             "provides": [
                 "ct.tools.Tool"
             ],
             "propertiesConstructor": true,
             "properties": {
-                "id": "shadowToggleTool",
+                "id": "daylightToggleTool",
                 "title": "${tool.title}",
                 "tooltip": "${tool.tooltip}",
                 "iconClass": "icon-time-clock",
@@ -154,7 +154,7 @@
             "references": [
                 {
                     "name": "handlerScope",
-                    "providing": "dn_shadow.ShadowWidgetController"
+                    "providing": "dn_daylight.DaylightWidgetController"
                 }
             ]
         }
