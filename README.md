@@ -1,5 +1,6 @@
 # Daylight
 This bundle enables the user to display the effect of light of certain time of day. Additionally, the shadow of 3D-Objects can be simulated.
+
 ![Screenshot App](https://github.com/conterra/mapapps-daylight/blob/master/screenshot.PNG)
 
 ## Sample App
@@ -7,6 +8,7 @@ https://demos.conterra.de/mapapps/resources/apps/downloads_daylight/index.html
 
 ## Installation Guide
 **Requirement: map.apps 4.9.0**
+
 **Restrictions: Only works in 3D view**
 
 ### Configurable Components of dn_daylight:
