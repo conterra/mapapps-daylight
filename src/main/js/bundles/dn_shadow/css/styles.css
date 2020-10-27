@@ -29,6 +29,10 @@
     box-shadow: none;
 }
 
+.esri-date-picker__date .everlasting .esri-widget-button, .everlasting .esri-widget--button {
+    font-size: 14px
+}
+
 /*fix for ticks*/
 
 .esri-daylight .esri-daylight__container .esri-slider .esri-daylight__container__tick {
@@ -49,7 +53,8 @@
 }
 
 .esri-daylight .esri-widget__anchor {
-    font-size: 20px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .everlasting .esri-widget__heading {
