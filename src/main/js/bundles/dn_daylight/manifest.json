@@ -142,9 +142,9 @@
             "propertiesConstructor": true,
             "properties": {
                 "id": "daylightToggleTool",
-                "title": "${tool.title}",
-                "tooltip": "${tool.tooltip}",
-                "iconClass": "icon-time-clock",
+                "title": "${windowTitle}",
+                "tooltip": "${windowTitle}",
+                "iconClass": "esri-icon-environment-settings",
                 "activateHandler": "onToolActivated",
                 "deactivateHandler": "onToolDeactivated",
                 "toolRole": "toolset",
