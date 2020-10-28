@@ -29,9 +29,7 @@
     box-shadow: none;
 }
 
-.esri-date-picker__date .everlasting .esri-widget-button, .everlasting .esri-widget--button {
-    font-size: 14px
-}
+
 
 /*fix for ticks*/
 
@@ -70,10 +68,14 @@
     background-color: transparent;
 }
 
-/* fix for different slider modes */
+/* fix for different styles */
 /* everlasting */
 .ctAppRoot.everlasting .esri-slider.esri-slider__mode--instant .esri-slider__segment-0 {
     background-color: rgba(110, 110, 110, 0.4);
+}
+
+.esri-daylight__container.esri-daylight__date-container .esri-date-picker__date{
+    font-size: 14px
 }
 
 .ctAppRoot.everlasting .esri-slider.esri-slider__mode--instant .esri-slider__segment-1 {
@@ -96,6 +98,30 @@
     background-color: #12a5f4;
 }
 
+.ctAppRoot.everlasting .esri-daylight .esri-daylight__container .esri-slider .esri-slider__tick-label {
+    font-size: 10px;
+    line-height: normal;
+    margin-top: 14px;
+    text-align: center;
+    color: #12a5f4;
+}
+
+.ctAppRoot.everlasting .esri-daylight .esri-daylight__container .esri-slider--horizontal .esri-slider-with-dropdown__box .esri-slider__label {
+    color: #12a5f4;
+}
+
+.ctAppRoot.everlasting .esri-daylight .esri-daylight__container .esri-daylight__play-pause-button {
+    background-color: #12a5f4;
+}
+
+.ctAppRoot.everlasting .esri-daylight .esri-daylight__checkbox {
+    color: #12a5f4;
+}
+
+.ctAppRoot.everlasting .esri-daylight .esri-widget__anchor {
+    color: #12a5f4;
+}
+
 .ctAppRoot.everlasting .esri-slider.esri-slider__mode--cumulative-from-start .esri-slider__segment-1 {
     background-color: rgba(110, 110, 110, 0.4);
 }
@@ -116,6 +142,10 @@
 /* autumn */
 .ctAppRoot.autumn .esri-slider.esri-slider__mode--instant .esri-slider__segment-1 {
     background-color: rgba(110, 110, 110, 0.4);
+}
+
+.esri-date-picker__date .autumn .esri-widget-button, .everlasting .esri-widget--button {
+    font-size: 14px
 }
 
 .ctAppRoot.autumn .esri-slider.esri-slider__mode--instant .esri-slider__segment-0 {
@@ -149,6 +179,31 @@
 
 .ctAppRoot.autumn .esri-slider.esri-slider__mode--cumulative-from-end .esri-slider__segment-1 {
     background-color: rgba(110, 110, 110, 0.4);
+}
+
+.ctAppRoot.autumn .esri-daylight .esri-daylight__container .esri-slider .esri-slider__tick-label {
+    font-size: 10px;
+    line-height: normal;
+    margin-top: 14px;
+    text-align: center;
+    color: #2980b9;
+}
+
+.ctAppRoot.autumn .esri-daylight .esri-daylight__container .esri-slider--horizontal .esri-slider-with-dropdown__box .esri-slider__label {
+    color: #2980b9;
+}
+
+
+.ctAppRoot.autumn .esri-daylight .esri-daylight__container .esri-daylight__play-pause-button {
+    background-color: #2980b9;
+}
+
+.ctAppRoot.autumn .esri-daylight .esri-daylight__checkbox {
+    color: #2980b9;
+}
+
+.ctAppRoot.autumn .esri-daylight .esri-widget__anchor {
+    color: #2980b9;
 }
 
 .ctAppRoot.autumn .esri-slider.esri-slider__mode--cumulative-from-end .esri-slider__segment-0 {
@@ -191,6 +246,31 @@
 
 .ctAppRoot.spring .esri-slider.esri-slider__mode--cumulative-from-end .esri-slider__segment-1 {
     background-color: rgba(110, 110, 110, 0.4);
+}
+
+.ctAppRoot.spring .esri-daylight .esri-daylight__container .esri-slider .esri-slider__tick-label {
+    font-size: 10px;
+    line-height: normal;
+    margin-top: 14px;
+    text-align: center;
+    color: #16a085;
+}
+
+.ctAppRoot.spring .esri-daylight .esri-daylight__container .esri-slider--horizontal .esri-slider-with-dropdown__box .esri-slider__label {
+    color: #16a085;
+}
+
+
+.ctAppRoot.spring .esri-daylight .esri-daylight__container .esri-daylight__play-pause-button {
+    background-color: #16a085;
+}
+
+.ctAppRoot.spring .esri-daylight .esri-daylight__checkbox {
+    color: #16a085;
+}
+
+.ctAppRoot.spring .esri-daylight .esri-widget__anchor {
+    color: #16a085;
 }
 
 .ctAppRoot.spring .esri-slider.esri-slider__mode--cumulative-from-end .esri-slider__segment-0 {
@@ -237,6 +317,30 @@
     background-color: rgba(110, 110, 110, 0.4);
 }
 
+.ctAppRoot.summer .esri-daylight .esri-daylight__container .esri-slider .esri-slider__tick-label {
+    font-size: 10px;
+    line-height: normal;
+    margin-top: 14px;
+    text-align: center;
+    color: #8c0f1a;
+}
+
+.ctAppRoot.summer .esri-daylight .esri-daylight__container .esri-slider--horizontal .esri-slider-with-dropdown__box .esri-slider__label {
+    color: #8c0f1a;
+}
+
+.ctAppRoot.summer .esri-daylight .esri-daylight__container .esri-daylight__play-pause-button {
+    background-color: #8c0f1a;
+}
+
+.ctAppRoot.summer .esri-daylight .esri-daylight__checkbox {
+    color: #8c0f1a;
+}
+
+.ctAppRoot.summer .esri-daylight .esri-widget__anchor {
+    color: #8c0f1a;
+}
+
 .ctAppRoot.summer .esri-slider.esri-slider__mode--cumulative-from-end .esri-slider__segment-0 {
     background-color: #8c0f1a;
 }
@@ -278,6 +382,31 @@
 
 .ctAppRoot.winter .esri-slider.esri-slider__mode--cumulative-from-end .esri-slider__segment-1 {
     background-color: rgba(110, 110, 110, 0.4);
+}
+
+
+.ctAppRoot.winter .esri-daylight .esri-daylight__container .esri-slider .esri-slider__tick-label {
+    font-size: 10px;
+    line-height: normal;
+    margin-top: 14px;
+    text-align: center;
+    color: #3c3c3c;
+}
+
+.ctAppRoot.winter .esri-daylight .esri-daylight__container .esri-slider--horizontal .esri-slider-with-dropdown__box .esri-slider__label {
+    color: #3c3c3c;
+}
+
+.ctAppRoot.winter .esri-daylight .esri-daylight__container .esri-daylight__play-pause-button {
+    background-color: #3c3c3c;
+}
+
+.ctAppRoot.winter .esri-daylight .esri-daylight__checkbox {
+    color: #3c3c3c;
+}
+
+.ctAppRoot.winter .esri-daylight .esri-widget__anchor {
+    color: #3c3c3c;
 }
 
 .ctAppRoot.winter .esri-slider.esri-slider__mode--cumulative-from-end .esri-slider__segment-0 {
