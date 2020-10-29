@@ -17,7 +17,7 @@ To make the functions of this bundle available to the user, the following tool c
 "dn_daylight": {
     "Config": {
         "timeSliderSteps": null,
-        "playSpeed": 2,
+        "playSpeedMultiplier": 2,
         "dateOrSeason": "date",
         "visibleElements": {
              "playButtons": true,
@@ -34,6 +34,6 @@ For more information concerning the properties refer to the documentation of the
 | Property                       | Type                | Possible Values                | Default               | Description                                                                                                                                                                                                             |
 |--------------------------------|---------------------|--------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | dateOrSeason                   | String              | ```date``` &#124; ```season``` | ```date```            | Controls whether the widget displays a date or a season picker.                                                                                                                                                         |
-| playSpeed                      | Number              |                                | 2                     | Controls the speed of the daytime and date animation.                                                                                                                                                                   |
+| playSpeedMultiplier            | Number              |                                | 2                     | Controls the speed of the daytime and date animation.                                                                                                                                                                   |
 | timeSliderSteps                | Number or Number[]  |                                | 5                     | Sets steps, or intervals, on the time slider to restrict the times of the day that can be selected when dragging the thumb.                                                                                             |
 | visibleElements                | Objects             |                                |                       | This property provides the ability to display or hide the individual elements of the widget. More information: https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Daylight.html#visibleElements |

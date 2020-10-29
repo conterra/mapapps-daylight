@@ -117,7 +117,7 @@
                 "fullEnvironment": {},
                 "timeSliderSteps": null,
                 "mode": "daylight-window",
-                "playSpeed": 2,
+                "playSpeedMultiplier": 2,
                 "dateOrSeason": "date",
                 "visibleElements": {
                     "playButtons": true,

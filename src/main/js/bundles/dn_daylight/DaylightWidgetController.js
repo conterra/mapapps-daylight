@@ -71,7 +71,7 @@ export default class DaylightWidgetFactory {
         const daylightProperties = {
             dateOrSeason: properties.dateOrSeason,
             mode: properties.mode,
-            playSpeedMultiplier: properties.playSpeed,
+            playSpeedMultiplier: properties.playSpeedMultiplier,
             visibleElements: properties.visibleElements
         };
         const timeSliderSteps = this._getTimeSliderSteps();
