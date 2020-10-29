@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 import Daylight from "esri/widgets/Daylight";
-import moment from "moment";
 
 const _daylightWidget = Symbol("_daylightWidget");
 const _initialEnvironment = Symbol("_initialEnvironment");
@@ -74,76 +73,11 @@ export default class DaylightWidgetFactory {
             playSpeedMultiplier: properties.playSpeedMultiplier,
             visibleElements: properties.visibleElements
         };
-        const timeSliderSteps = this._getTimeSliderSteps();
+        const timeSliderSteps = properties.timeSliderSteps;
         if (timeSliderSteps) {
             daylightProperties.timeSliderSteps = timeSliderSteps;
         }
         return daylightProperties;
-    }
-
-
-    _getTimeSliderSteps() {
-        const properties = this._properties;
-        const stepsProperties = properties.timeSliderSteps;
-        let timeSliderSteps = null;
-        if (stepsProperties) {
-            if (stepsProperties.dates) {
-                timeSliderSteps = {};
-                timeSliderSteps.dates = stepsProperties.map((dateString) => moment(dateString).toDate());
-            } else if (stepsProperties.moment) {
-                timeSliderSteps = {};
-                const dates = [];
-                let momentObj = moment();
-                stepsProperties.moment.forEach((timeStop) => {
-                    if (!timeStop) {
-                        // do nothing
-                    } else if (typeof timeStop === 'string') {
-                        momentObj = moment(timeStop);
-                    } else if (Array.isArray(timeStop)) {
-                        timeStop.forEach((time) => {
-                            momentObj[time.method].apply(momentObj, time.args);
-                        });
-                    } else {
-                        momentObj[timeStop.method].apply(momentObj, timeStop.args);
-                    }
-                    dates.push(momentObj.toDate());
-                });
-                timeSliderSteps.dates = dates;
-            } else {
-                if (stepsProperties.count) {
-                    timeSliderSteps = {};
-                    const defaultStopCount = 10;
-                    timeSliderSteps.count = stepsProperties.count || defaultStopCount;
-                } else if (stepsProperties.interval) {
-                    timeSliderSteps = {};
-                    timeSliderSteps.interval = {
-                        value: stepsProperties.interval.value || 1,
-                        unit: stepsProperties.interval.unit || "years"
-                    }
-                }
-                if (stepsProperties.timeExtent && timeSliderSteps) {
-                    let start = null;
-                    let end = null;
-                    if (stepsProperties.timeExtent.start) {
-                        start = moment(stepsProperties.timeExtent.start);
-                    }
-                    if (stepsProperties.timeExtent.end) {
-                        end = moment(stepsProperties.timeExtent.end);
-                    }
-                    if (start && end) {
-                        timeSliderSteps.timeExtent = {
-                            start: start.toDate(),
-                            end: end.toDate()
-                        }
-                    }
-                }
-            }
-        }
-        return timeSliderSteps;
-    }
-
-    _getDate(config) {
-        return moment(config).toDate();
     }
 
     _getView() {
