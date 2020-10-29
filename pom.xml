@@ -523,9 +523,9 @@
         </plugins>
     </build>
     <scm>
-        <connection>scm:git:https://github.com/conterra/mapapps-charting.git</connection>
-        <developerConnection>scm:git:https://github.com/conterra/mapapps-charting.git</developerConnection>
-        <url>https://github.com/conterra/mapapps-charting</url>
+        <connection>scm:git:https://github.com/conterra/mapapps-daylight.git</connection>
+        <developerConnection>scm:git:https://github.com/conterra/mapapps-daylight.git</developerConnection>
+        <url>https://github.com/conterra/mapapps-daylight</url>
         <tag>HEAD</tag>
     </scm>
     <distributionManagement>
