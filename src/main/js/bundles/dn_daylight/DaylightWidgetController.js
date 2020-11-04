@@ -32,6 +32,8 @@ export default class DaylightWidgetFactory {
     }
 
     onToolActivated() {
+        const properties = this._properties;
+        
         this._getView().then((view) => {
             view.environment = {
                 atmosphere: {
@@ -41,7 +43,8 @@ export default class DaylightWidgetFactory {
                 lighting: {
                     // gets the current date at the user's location
                     // and converts it to the local date in Brest, France
-                    date: new Date()
+                    date: new Date(),
+                    directShadowsEnabled: properties.enableShadows
                 }
             };
         });

@@ -31,9 +31,9 @@
                 "title": "${windowTitle}",
                 "dockTool": "daylightToggleTool",
                 "closable": true,
-                "maximizable": true,
+                "maximizable": false,
                 "minimizeOnClose": true,
-                "resizable": true,
+                "resizable": false,
                 "marginBox": {
                     "w": 350,
                     "h": 250,
@@ -119,6 +119,7 @@
                 "mode": "daylight-window",
                 "playSpeedMultiplier": 2,
                 "dateOrSeason": "date",
+                "enableShadows": true,
                 "visibleElements": {
                     "playButtons": true,
                     "shadowsToggle": true,
@@ -160,5 +161,3 @@
         }
     ]
 }
-
-
