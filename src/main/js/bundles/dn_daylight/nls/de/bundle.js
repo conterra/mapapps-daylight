@@ -16,7 +16,7 @@
 module.exports = {
     bundleName: "Tageslicht",
     bundleDescription: "Das Bundle ermöglicht dem Nutzer verschiedene Tageszeiten zu simulieren. Zusätzlich können Schatten für 3D-Objekte angezeigt werden.",
-    windowTitle: "Tageslicht Widget",
+    windowTitle: "Tageslicht-Simulation",
     widget:{
         title: "Tageslicht",
         tooltip: "Tageslicht",
