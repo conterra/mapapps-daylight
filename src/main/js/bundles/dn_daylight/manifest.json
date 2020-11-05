@@ -113,9 +113,7 @@
             ],
             "properties": {
                 "widgetRole": "daylightWidget",
-                "fullEnvironment": {},
                 "timeSliderSteps": null,
-                "mode": "daylight-window",
                 "playSpeedMultiplier": 2,
                 "dateOrSeason": "date",
                 "enableShadows": true,

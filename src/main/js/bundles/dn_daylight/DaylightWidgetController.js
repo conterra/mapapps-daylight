@@ -68,7 +68,6 @@ export default class DaylightWidgetFactory {
         const properties = this._properties;
         const daylightProperties = {
             dateOrSeason: properties.dateOrSeason,
-            mode: properties.mode,
             playSpeedMultiplier: properties.playSpeedMultiplier,
             visibleElements: properties.visibleElements
         };
