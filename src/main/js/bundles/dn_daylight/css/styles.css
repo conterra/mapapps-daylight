@@ -13,26 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.ctAppRoot .daylight-window .dijitDialogPaneContent {
-    padding: 0;
+
+ .esri-daylight .esri-widget__heading {
+    display: none;
 }
 
-.ctAppRoot .esri-slider .esri-slider__slider {
-    background-color: transparent;
+.esri-date-picker__calendar .esri-date-picker__month-dropdown.esri-select {
+    color: inherit;
 }
 
-.ctAppRoot .esri-slider .esri-widget--button {
-    box-sizing: border-box;
+.esri-daylight .esri-widget__anchor {
+    font-size: 15px;
 }
 
-.ctAppRoot .esri-slider .esri-widget--button:hover {
-    box-shadow: none;
-}
-
-
-
-/*fix for ticks*/
-
+/* fix for ticks */
 .esri-daylight .esri-daylight__container .esri-slider .esri-daylight__container__tick {
     width: 0px;
     color: black;
@@ -41,31 +35,6 @@
     border-style: solid;
     border-width: 1px 1px 1px 1px;
     box-sizing: content-box;
-}
-
-.esri-daylight .esri-widget__heading {
-    display: none;
-}
-.esri-date-picker__calendar .esri-date-picker__month-dropdown.esri-select {
-    color: inherit;
-}
-
-.esri-daylight .esri-widget__anchor {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.everlasting .esri-widget__heading {
-    color: inherit;
-    margin: inherit;
-}
-
-.esri-daylight .esri-widget {
-    margin: auto;
-    font-size: inherit;
-    font-family: inherit;
-    color: inherit;
-    background-color: transparent;
 }
 
 /* fix for different styles */

@@ -44,19 +44,18 @@
                     "w": 350,
                     "h": 230
                 },
-                "windowClass": "daylight-window"
+                "windowClass": "daylight-window noPadding"
             }
         },
         {
             "widgetRole": "daylightWidget",
             "sublayout": [
+                "mobile_landscape",
                 "mobile_portrait"
             ],
             "window": {
                 "dockingBar": "${id}-dockingBarBottomLeft",
-                "resizable": false,
                 "draggable": false,
-                "maximizable": false,
                 "fixEdgesInViewport": {
                     "l": true,
                     "r": true
@@ -75,19 +74,11 @@
                 "mobile_landscape"
             ],
             "window": {
-                "dockingBar": "${id}-dockingBarBottomLeft",
-                "resizable": false,
-                "draggable": false,
-                "maximizable": false,
-                "fixEdgesInViewport": {
-                    "l": true,
-                    "r": true
-                },
                 "marginBox": {
-                    "h": 230,
+                    "h": 250,
+                    "w": 350,
                     "b": 0,
-                    "r": 0,
-                    "l": 50
+                    "r": 0
                 }
             }
         }

@@ -22,6 +22,7 @@
             "system",
             "templatelayout",
             "template-seasons",
+            "theme-everlasting",
             "theme-autumn",
             "toolrules",
             "toolset",
@@ -174,6 +175,14 @@
                         ]
                     }
                 ]
+            }
+        },
+        "themes": {
+            "ThemeModel": {
+                "_selectedTheme": "autumn"
+            },
+            "ThemeSelector": {
+                "componentEnabled": true
             }
         },
         "toolset": {
