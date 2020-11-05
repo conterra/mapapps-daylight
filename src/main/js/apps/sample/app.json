@@ -8,27 +8,23 @@
             "bundles"
         ],
         "allowedBundles": [
-            "system",
-            "console",
-            "notifier",
-            "splashscreen",
-            "templatelayout",
-            "template-seasons",
-            "theme-everlasting",
+            "banner",
+            "locateme",
+            "locator-store",
             "map-init",
             "map-preload-3D",
-            "toolset",
-            "toolrules",
-            "banner",
-            "basemaptoggler",
-            "custominfo",
             "mapnavigation",
-            "scalebar",
-            "locateme",
-            "share-link",
+            "notifier",
             "omnisearch",
-            "locator-store",
             "popups-default",
+            "scalebar",
+            "splashscreen",
+            "system",
+            "templatelayout",
+            "template-seasons",
+            "theme-autumn",
+            "toolrules",
+            "toolset",
             "dn_daylight"
         ],
         "require": [
@@ -61,166 +57,63 @@
                 "map": {
                     "layers": [
                         {
-                            "id": "group",
-                            "type": "GROUP",
-                            "title": "3D-Gebäude Zürich",
-                            "visibilityMode": "exclusive",
-                            "layers": [
-                                {
-                                    "id": "zuerich3d",
-                                    "title": "Edge-Rendering",
-                                    "url": "https://tiles.arcgis.com/tiles/oPre3pOfRfefL8y0/arcgis/rest/services/LOD2_GEBAEUDE_ZRH/SceneServer",
-                                    "type": "AGS_SCENE",
-                                    "popupTemplate": {
-                                        "title": "{expression/typ}",
-                                        "content": [
+                            "id": "zuerich3d",
+                            "title": "Edge-Rendering",
+                            "url": "https://tiles.arcgis.com/tiles/oPre3pOfRfefL8y0/arcgis/rest/services/LOD2_GEBAEUDE_ZRH/SceneServer",
+                            "type": "AGS_SCENE",
+                            "popupTemplate": {
+                                "title": "{expression/typ}",
+                                "content": [
+                                    {
+                                        "type": "fields",
+                                        "fieldInfos": [
                                             {
-                                                "type": "fields",
-                                                "fieldInfos": [
-                                                    {
-                                                        "fieldName": "expression/quality"
-                                                    },
-                                                    {
-                                                        "fieldName": "EGID",
-                                                        "label": "Eidgenössischer Gebäudeidentifikator"
-                                                    }
-                                                ]
-                                            }
-                                        ],
-                                        "expressionInfos": [
-                                            {
-                                                "name": "typ",
-                                                "expression": "When($feature.ART == 'BB00', 'Verwaltung', $feature.ART == 'BB01', 'Wohngebäude', $feature.ART == 'BB02', 'Land & Forstwirtschaft',$feature.ART == 'BB03', 'Verkehr',$feature.ART == 'BB04', 'Handel',$feature.ART == 'BB05', 'Industrie & Gewerbe',$feature.ART == 'BB06', 'Gastgewerbe',$feature.ART == 'BB07', 'Nebengebäude',$feature.ART == 'EO08', 'Brücke/Passerelle',$feature.ART == 'EO12', 'Pfeiler',$feature.ART == 'EO13', 'Unterstand',$feature.ART == 'EO14', 'Silo/Turm/Gasometer',$feature.ART == 'EO16', 'Hochkamin',$feature.ART == 'EO18', 'Mast/Antenne', 'n/a')"
+                                                "fieldName": "expression/quality"
                                             },
                                             {
-                                                "name": "quality",
-                                                "title": "Qualität",
-                                                "expression": "When($feature.QUALITAET_STATUS == 0, 'Qualität nicht eingehalten -> Gebäudehöhe wurde nicht gemessen -> die Baute hat eine generische Höhe von 3m', $feature.QUALITAET_STATUS == 1, 'normale Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt', $feature.QUALITAET_STATUS == 2, 'spezielle Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt und speziell kontrolliert', 'n/a')"
+                                                "fieldName": "EGID",
+                                                "label": "Eidgenössischer Gebäudeidentifikator"
                                             }
                                         ]
+                                    }
+                                ],
+                                "expressionInfos": [
+                                    {
+                                        "name": "typ",
+                                        "expression": "When($feature.ART == 'BB00', 'Verwaltung', $feature.ART == 'BB01', 'Wohngebäude', $feature.ART == 'BB02', 'Land & Forstwirtschaft',$feature.ART == 'BB03', 'Verkehr',$feature.ART == 'BB04', 'Handel',$feature.ART == 'BB05', 'Industrie & Gewerbe',$feature.ART == 'BB06', 'Gastgewerbe',$feature.ART == 'BB07', 'Nebengebäude',$feature.ART == 'EO08', 'Brücke/Passerelle',$feature.ART == 'EO12', 'Pfeiler',$feature.ART == 'EO13', 'Unterstand',$feature.ART == 'EO14', 'Silo/Turm/Gasometer',$feature.ART == 'EO16', 'Hochkamin',$feature.ART == 'EO18', 'Mast/Antenne', 'n/a')"
                                     },
-                                    "renderer": {
-                                        "type": "simple",
-                                        "symbol": {
-                                            "type": "mesh-3d",
-                                            "symbolLayers": [
-                                                {
-                                                    "type": "fill",
-                                                    "material": {
-                                                        "color": "#ffffff",
-                                                        "colorMixMode": "replace"
-                                                    },
-                                                    "edges": {
-                                                        "type": "solid",
-                                                        "color": [
-                                                            50,
-                                                            50,
-                                                            50,
-                                                            0.5
-                                                        ],
-                                                        "size": 1
-                                                    }
-                                                }
-                                            ]
-                                        }
+                                    {
+                                        "name": "quality",
+                                        "title": "Qualität",
+                                        "expression": "When($feature.QUALITAET_STATUS == 0, 'Qualität nicht eingehalten -> Gebäudehöhe wurde nicht gemessen -> die Baute hat eine generische Höhe von 3m', $feature.QUALITAET_STATUS == 1, 'normale Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt', $feature.QUALITAET_STATUS == 2, 'spezielle Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt und speziell kontrolliert', 'n/a')"
                                     }
-                                },
-                                {
-                                    "id": "zuerich3d",
-                                    "title": "Sketched",
-                                    "url": "https://tiles.arcgis.com/tiles/oPre3pOfRfefL8y0/arcgis/rest/services/LOD2_GEBAEUDE_ZRH/SceneServer",
-                                    "type": "AGS_SCENE",
-                                    "visible": false,
-                                    "popupTemplate": {
-                                        "title": "{expression/typ}",
-                                        "content": [
-                                            {
-                                                "type": "fields",
-                                                "fieldInfos": [
-                                                    {
-                                                        "fieldName": "expression/quality"
-                                                    },
-                                                    {
-                                                        "fieldName": "EGID",
-                                                        "label": "Eidgenössischer Gebäudeidentifikator"
-                                                    }
-                                                ]
-                                            }
-                                        ],
-                                        "expressionInfos": [
-                                            {
-                                                "name": "typ",
-                                                "expression": "When($feature.ART == 'BB00', 'Verwaltung', $feature.ART == 'BB01', 'Wohngebäude', $feature.ART == 'BB02', 'Land & Forstwirtschaft',$feature.ART == 'BB03', 'Verkehr',$feature.ART == 'BB04', 'Handel',$feature.ART == 'BB05', 'Industrie & Gewerbe',$feature.ART == 'BB06', 'Gastgewerbe',$feature.ART == 'BB07', 'Nebengebäude',$feature.ART == 'EO08', 'Brücke/Passerelle',$feature.ART == 'EO12', 'Pfeiler',$feature.ART == 'EO13', 'Unterstand',$feature.ART == 'EO14', 'Silo/Turm/Gasometer',$feature.ART == 'EO16', 'Hochkamin',$feature.ART == 'EO18', 'Mast/Antenne', 'n/a')"
+                                ]
+                            },
+                            "renderer": {
+                                "type": "simple",
+                                "symbol": {
+                                    "type": "mesh-3d",
+                                    "symbolLayers": [
+                                        {
+                                            "type": "fill",
+                                            "material": {
+                                                "color": "#ffffff",
+                                                "colorMixMode": "replace"
                                             },
-                                            {
-                                                "name": "quality",
-                                                "title": "Qualität",
-                                                "expression": "When($feature.QUALITAET_STATUS == 0, 'Qualität nicht eingehalten -> Gebäudehöhe wurde nicht gemessen -> die Baute hat eine generische Höhe von 3m', $feature.QUALITAET_STATUS == 1, 'normale Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt', $feature.QUALITAET_STATUS == 2, 'spezielle Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt und speziell kontrolliert', 'n/a')"
+                                            "edges": {
+                                                "type": "solid",
+                                                "color": [
+                                                    50,
+                                                    50,
+                                                    50,
+                                                    0.5
+                                                ],
+                                                "size": 1
                                             }
-                                        ]
-                                    },
-                                    "renderer": {
-                                        "type": "simple",
-                                        "symbol": {
-                                            "type": "mesh-3d",
-                                            "symbolLayers": [
-                                                {
-                                                    "type": "fill",
-                                                    "material": {
-                                                        "color": "#ffffff",
-                                                        "colorMixMode": "replace"
-                                                    },
-                                                    "edges": {
-                                                        "type": "sketch",
-                                                        "color": [
-                                                            50,
-                                                            50,
-                                                            50,
-                                                            0.5
-                                                        ],
-                                                        "size": 2,
-                                                        "extensionLength": 10
-                                                    }
-                                                }
-                                            ]
                                         }
-                                    }
-                                },
-                                {
-                                    "id": "zuerich3d3",
-                                    "title": "Standard",
-                                    "url": "https://tiles.arcgis.com/tiles/oPre3pOfRfefL8y0/arcgis/rest/services/LOD2_GEBAEUDE_ZRH/SceneServer",
-                                    "type": "AGS_SCENE",
-                                    "popupTemplate": {
-                                        "title": "{expression/typ}",
-                                        "content": [
-                                            {
-                                                "type": "fields",
-                                                "fieldInfos": [
-                                                    {
-                                                        "fieldName": "expression/quality"
-                                                    },
-                                                    {
-                                                        "fieldName": "EGID",
-                                                        "label": "Eidgenössischer Gebäudeidentifikator"
-                                                    }
-                                                ]
-                                            }
-                                        ],
-                                        "expressionInfos": [
-                                            {
-                                                "name": "typ",
-                                                "expression": "When($feature.ART == 'BB00', 'Verwaltung', $feature.ART == 'BB01', 'Wohngebäude', $feature.ART == 'BB02', 'Land & Forstwirtschaft',$feature.ART == 'BB03', 'Verkehr',$feature.ART == 'BB04', 'Handel',$feature.ART == 'BB05', 'Industrie & Gewerbe',$feature.ART == 'BB06', 'Gastgewerbe',$feature.ART == 'BB07', 'Nebengebäude',$feature.ART == 'EO08', 'Brücke/Passerelle',$feature.ART == 'EO12', 'Pfeiler',$feature.ART == 'EO13', 'Unterstand',$feature.ART == 'EO14', 'Silo/Turm/Gasometer',$feature.ART == 'EO16', 'Hochkamin',$feature.ART == 'EO18', 'Mast/Antenne', 'n/a')"
-                                            },
-                                            {
-                                                "name": "quality",
-                                                "title": "Qualität",
-                                                "expression": "When($feature.QUALITAET_STATUS == 0, 'Qualität nicht eingehalten -> Gebäudehöhe wurde nicht gemessen -> die Baute hat eine generische Höhe von 3m', $feature.QUALITAET_STATUS == 1, 'normale Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt', $feature.QUALITAET_STATUS == 2, 'spezielle Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt und speziell kontrolliert', 'n/a')"
-                                            }
-                                        ]
-                                    }
+                                    ]
                                 }
-                            ]
+                            }
                         }
                     ],
                     "ground": [
@@ -247,45 +140,6 @@
                 }
             }
         },
-        "basemaptoggler": {
-            "Config": {
-                "nextBasemap": "hybrid"
-            }
-        },
-        "custominfo": {
-            "CustomInfoToggleTool": [
-                {
-                    "widgetSettings": {
-                        "content": "${info}",
-                        "window": {
-                            "marginBox": {
-                                "w": 320,
-                                "h": 500
-                            },
-                            "draggable": true,
-                            "closable": true,
-                            "modal": true,
-                            "maximizable": false,
-                            "resizable": true,
-                            "title": "Info"
-                        }
-                    },
-                    "type": "IMPRINT",
-                    "toolClass": "ctInfo",
-                    "title": "Info",
-                    "tooltip": "Zeige Info",
-                    "tooltipPositions": [
-                        "after",
-                        "above",
-                        "below",
-                        "before"
-                    ],
-                    "iconClass": "icon-custom-info-imprint",
-                    "togglable": true,
-                    "id": "IMPRINT_Imprint_CustomInfoTool"
-                }
-            ]
-        },
         "templates": {
             "TemplateModel": {
                 "_templates": [
@@ -297,13 +151,6 @@
                                 "attachTo": "map_topleft",
                                 "props": {
                                     "layoutIndex": 0
-                                }
-                            },
-                            {
-                                "widgetRole": "sharelink",
-                                "window": {
-                                    "dockable": false,
-                                    "dockingBar": null
                                 }
                             },
                             {
@@ -322,7 +169,7 @@
                                 "sublayout": [
                                     "mobile_portrait"
                                 ],
-                                "attachTo": "footer_right"
+                                "attachTo": "header_right"
                             }
                         ]
                     }
@@ -335,6 +182,7 @@
                     {
                         "id": "mapview_tools",
                         "tools": [
+                            "daylightToggleTool",
                             "locateMeTool",
                             "zoomInTool",
                             "zoomOutTool",
@@ -347,22 +195,6 @@
                         "container": "ignore",
                         "windowType": "container",
                         "cssClass": "muted"
-                    },
-                    {
-                        "id": "drawer_left",
-                        "title": "Werkzeuge",
-                        "cssClass": "ct-main-app-menu",
-                        "tools": [
-                            "sharelinkTool",
-                            "daylightToggleTool",
-                            "IMPRINT_Imprint_CustomInfoTool",
-                            "IMPRINT_Imprint_CustomInfoTool_mobile"
-                        ],
-                        "registerWidget": {
-                            "widgetRole": "drawer_button"
-                        },
-                        "container": "ignore",
-                        "windowType": "drawer_left"
                     }
                 ]
             }

@@ -50,19 +50,20 @@
         {
             "widgetRole": "daylightWidget",
             "sublayout": [
-                "mobile_landscape",
                 "mobile_portrait"
             ],
             "window": {
                 "dockingBar": "${id}-dockingBarBottomLeft",
                 "resizable": false,
+                "draggable": false,
+                "maximizable": false,
                 "fixEdgesInViewport": {
                     "l": true,
                     "r": true
                 },
                 "marginBox": {
-                    "h": 230,
-                    "b": 42,
+                    "h": 250,
+                    "b": 40,
                     "r": 0,
                     "l": 0
                 }
@@ -74,7 +75,14 @@
                 "mobile_landscape"
             ],
             "window": {
+                "dockingBar": "${id}-dockingBarBottomLeft",
                 "resizable": false,
+                "draggable": false,
+                "maximizable": false,
+                "fixEdgesInViewport": {
+                    "l": true,
+                    "r": true
+                },
                 "marginBox": {
                     "h": 230,
                     "b": 0,
