@@ -112,14 +112,13 @@
                 "dn_daylight.DaylightWidgetController"
             ],
             "properties": {
-                "widgetRole": "daylightWidget",
-                "timeSliderSteps": null,
-                "playSpeedMultiplier": 2,
+                "timeSliderSteps": 5,
+                "playSpeedMultiplier": 1,
                 "dateOrSeason": "date",
                 "enableShadows": true,
                 "visibleElements": {
                     "playButtons": true,
-                    "shadowsToggle": true,
+                    "shadowsToggle": false,
                     "datePicker": true,
                     "timezone": false
                 }
