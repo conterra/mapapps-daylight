@@ -15,13 +15,16 @@
  */
 import EsriDijit from "esri-widgets/EsriDijit";
 import Binding from "apprt-binding/Binding";
-
-const _binding = Symbol("_binding");
+import Daylight from "esri/widgets/Daylight";
 
 export default class DaylightWidgetFactory {
 
+    #binding = null;
+    #daylightWidget = null;
+
     deactivate() {
         this._deactivateBinding();
+        this._destroyWidget();
     }
 
     createInstance() {
@@ -29,9 +32,10 @@ export default class DaylightWidgetFactory {
     }
 
     _getWidget() {
-        const daylightWidget = this._daylightWidgetController.getWidget();
+        const daylightProperties = this._daylightWidgetController.getDaylightWidgetProperties();
+        const daylightWidget = this.#daylightWidget = new Daylight(daylightProperties);
         const mapWidgetModel = this._mapWidgetModel;
-        const binding = this[_binding] = Binding.for(daylightWidget, mapWidgetModel)
+        const binding = this.#binding = Binding.for(daylightWidget, mapWidgetModel)
             .syncToLeft("view")
             .enable()
             .syncToLeftNow();
@@ -41,8 +45,13 @@ export default class DaylightWidgetFactory {
         return new EsriDijit(daylightWidget);
     }
 
+    _destroyWidget() {
+        this.#daylightWidget?.destroy();
+        this.#daylightWidget = null;
+    }
+
     _deactivateBinding() {
-        this[_binding].unbind();
-        this[_binding] = undefined;
+        this.#binding?.unbind();
+        this.#binding = null;
     }
 }

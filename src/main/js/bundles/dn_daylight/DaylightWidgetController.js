@@ -13,16 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import Daylight from "esri/widgets/Daylight";
+export default class DaylightWidgetController {
 
-const _daylightWidget = Symbol("_daylightWidget");
-const _initialEnvironment = Symbol("_initialEnvironment");
-
-export default class DaylightWidgetFactory {
+    #initialEnvironment = null;
 
     activate() {
         this._getView().then((view) => {
-            this[_initialEnvironment] = view.environment;
+            this.#initialEnvironment = view.environment;
         });
     }
 
@@ -33,7 +30,7 @@ export default class DaylightWidgetFactory {
 
     onToolActivated() {
         const properties = this._properties;
-        
+
         this._getView().then((view) => {
             view.environment = {
                 atmosphere: {
@@ -52,16 +49,6 @@ export default class DaylightWidgetFactory {
 
     onToolDeactivated() {
         this._resetEnvironment();
-    }
-
-    getWidget() {
-        const daylightProperties = this.getDaylightWidgetProperties();
-        return this[_daylightWidget] = new Daylight(daylightProperties);
-    }
-
-    _destroyWidget() {
-        this[_daylightWidget].destroy();
-        this[_daylightWidget] = undefined;
     }
 
     getDaylightWidgetProperties() {
@@ -84,7 +71,8 @@ export default class DaylightWidgetFactory {
             if (mapWidgetModel.view) {
                 resolve(mapWidgetModel.view);
             } else {
-                mapWidgetModel.watch("view", ({value: view}) => {
+                const watcher = mapWidgetModel.watch("view", ({value: view}) => {
+                    watcher.remove();
                     resolve(view);
                 });
             }
@@ -93,7 +81,7 @@ export default class DaylightWidgetFactory {
 
     _resetEnvironment() {
         this._getView().then((view) => {
-            view.environment = this[_initialEnvironment];
+            view.environment = this.#initialEnvironment;
         })
     }
 }
