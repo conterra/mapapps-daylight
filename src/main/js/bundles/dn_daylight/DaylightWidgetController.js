@@ -25,7 +25,6 @@ export default class DaylightWidgetController {
 
     deactivate() {
         this._resetEnvironment();
-        this._destroyWidget();
     }
 
     onToolActivated() {
@@ -34,12 +33,9 @@ export default class DaylightWidgetController {
         this._getView().then((view) => {
             view.environment = {
                 atmosphere: {
-                    // creates a realistic view of the atmosphere
                     quality: "high"
                 },
                 lighting: {
-                    // gets the current date at the user's location
-                    // and converts it to the local date in Brest, France
                     date: new Date(),
                     directShadowsEnabled: properties.enableShadows
                 }
