@@ -142,7 +142,7 @@
                 "id": "daylightToggleTool",
                 "title": "${windowTitle}",
                 "tooltip": "${windowTitle}",
-                "iconClass": "esri-icon-environment-settings",
+                "iconClass": "icon-transparency",
                 "activateHandler": "onToolActivated",
                 "deactivateHandler": "onToolDeactivated",
                 "toolRole": "toolset",
