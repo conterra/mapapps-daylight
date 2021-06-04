@@ -16,19 +16,13 @@
 module.exports = {
     root: {
         bundleName: "Daylight",
-        bundleDescription: "This bundle enables the user to display the effect of light of certain time of day. Additionally, the shadow of 3D-Objects can be simulated.",
-        windowTitle: "Daylight simulation",
-        widget: {
+        bundleDescription: "The daylight widget can be used to manipulate the time and date and to toggle shadows in a SceneView.",
+        ui: {
+            windowTitle: "Daylight simulation"
+        },
+        tool: {
             title: "Daylight",
             tooltip: "Daylight",
-            showshadow:"Show shadow",
-            daytime:"Time of Day",
-            morning: "Morning",
-            noon: "Noon",
-            afternoon: "Afternoon",
-            evening: "Evening",
-            time: "Time"
-
         }
     },
     de: true

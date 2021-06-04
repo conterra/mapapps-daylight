@@ -15,17 +15,12 @@
  */
 module.exports = {
     bundleName: "Tageslicht",
-    bundleDescription: "Das Bundle ermöglicht dem Nutzer verschiedene Tageszeiten zu simulieren. Zusätzlich können Schatten für 3D-Objekte angezeigt werden.",
-    windowTitle: "Tageslicht-Simulation",
-    widget:{
+    bundleDescription: "Das Tageslicht-Widget kann verwendet werden, um die Uhrzeit und das Datum zu manipulieren und den Schatten in einer SceneView umzuschalten.",
+    ui: {
+        windowTitle: "Tageslicht-Simulation"
+    },
+    tool: {
         title: "Tageslicht",
         tooltip: "Tageslicht",
-        showshadow:"Schatten anzeigen",
-        daytime:"Tageszeit",
-        morning: "Morgen",
-        noon: "Mittag",
-        afternoon: "Nachmittag",
-        evening: "Abend",
-        time: "Zeit"
     }
 }

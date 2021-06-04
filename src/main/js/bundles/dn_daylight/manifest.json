@@ -11,10 +11,10 @@
     "license": {},
     "productName": "devnet-mapapps-daylight",
     "dependencies": {
-        "esri": "^4.16.0",
-        "esri-widgets": "^4.9.0",
-        "map-widget": "^4.9.0",
-        "apprt-binding": "^4.9.0"
+        "esri": "^4.14.0",
+        "esri-widgets": "^4.8.0",
+        "map-widget": "^4.8.0",
+        "apprt-binding": "^4.8.0"
     },
     "CSS-Themes-Extension": [
         {
@@ -28,7 +28,7 @@
         {
             "widgetRole": "daylightWidget",
             "window": {
-                "title": "${windowTitle}",
+                "title": "${ui.windowTitle}",
                 "dockTool": "daylightToggleTool",
                 "closable": true,
                 "maximizable": false,
@@ -139,8 +139,8 @@
             "propertiesConstructor": true,
             "properties": {
                 "id": "daylightToggleTool",
-                "title": "${windowTitle}",
-                "tooltip": "${windowTitle}",
+                "title": "${tool.title}",
+                "tooltip": "${tool.tooltip}",
                 "iconClass": "icon-transparency",
                 "activateHandler": "onToolActivated",
                 "deactivateHandler": "onToolDeactivated",
