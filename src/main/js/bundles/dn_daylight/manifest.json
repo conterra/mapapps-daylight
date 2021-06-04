@@ -146,7 +146,11 @@
                 "deactivateHandler": "onToolDeactivated",
                 "toolRole": "toolset",
                 "togglable": true,
-                "noGroup": true
+                "noGroup": true,
+                "rules": {
+                    "viewmode": "3D",
+                    "ruleSuccessProperty": "visibility"
+                }
             },
             "references": [
                 {
