@@ -63,8 +63,8 @@
             "Config": {
                 "basemaps": [
                     {
-                        "id": "streets",
-                        "title": "Streets",
+                        "id": "topo",
+                        "title": "Topo",
                         "selected": true,
                         "basemap": "topo-vector"
                     }
