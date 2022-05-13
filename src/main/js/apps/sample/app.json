@@ -3,10 +3,7 @@
         "title": "${apptitle}"
     },
     "load": {
-        "bundleLocations": [
-            "localbundles",
-            "bundles"
-        ],
+        "bundleLocations": ["localbundles", "bundles"],
         "allowedBundles": [
             "banner",
             "locateme",
@@ -28,12 +25,8 @@
             "toolset",
             "dn_daylight"
         ],
-        "require": [
-            "${app}.app"
-        ],
-        "i18n": [
-            "bundle"
-        ]
+        "require": ["${app}.app"],
+        "i18n": ["bundle"]
     },
     "bundles": {
         "dn_daylight": {
@@ -117,12 +110,7 @@
                                             },
                                             "edges": {
                                                 "type": "solid",
-                                                "color": [
-                                                    50,
-                                                    50,
-                                                    50,
-                                                    0.5
-                                                ],
+                                                "color": [50, 50, 50, 0.5],
                                                 "size": 1
                                             }
                                         }
@@ -181,9 +169,7 @@
                             },
                             {
                                 "widgetRole": "banner",
-                                "sublayout": [
-                                    "mobile_portrait"
-                                ],
+                                "sublayout": ["mobile_portrait"],
                                 "attachTo": "header_right"
                             }
                         ]
@@ -224,9 +210,7 @@
         },
         "toolrules": {
             "ToolActiveStateManager": {
-                "activateOnStartToolIds": [
-                    "daylightToggleTool"
-                ]
+                "activateOnStartToolIds": ["daylightToggleTool"]
             }
         }
     }

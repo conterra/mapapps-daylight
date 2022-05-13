@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2020 con terra GmbH (info@conterra.de)
+ * Copyright (C) 2022 con terra GmbH (info@conterra.de)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,9 @@
     display: none;
 }
 
-.ctAppRoot .esri-date-picker__calendar .esri-date-picker__month-dropdown.esri-select {
+.ctAppRoot
+    .esri-date-picker__calendar
+    .esri-date-picker__month-dropdown.esri-select {
     color: inherit;
 }
 
@@ -26,12 +28,18 @@
     font-size: 15px;
 }
 
-.ctAppRoot .esri-daylight .esri-daylight__container .esri-slider .esri-daylight__container__tick {
+.ctAppRoot
+    .esri-daylight
+    .esri-daylight__container
+    .esri-slider
+    .esri-daylight__container__tick {
     width: 0px;
     margin: -3px 0;
     border: 1px solid transparent;
 }
 
-.ctAppRoot .esri-daylight__container.esri-daylight__date-container .esri-date-picker__date{
+.ctAppRoot
+    .esri-daylight__container.esri-daylight__date-container
+    .esri-date-picker__date {
     font-size: initial;
 }
