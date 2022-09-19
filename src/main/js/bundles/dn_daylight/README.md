@@ -8,13 +8,13 @@ Simply add the bundle "dn_daylight" to your app.
 
 To make the functions of this bundle available to the user, the following tool can be added to a toolset:
 
-| Tool ID                | Component              | Description              |
-| ---------------------- | ---------------------- | ------------------------ |
-| daylightToggleTool     | DaylightToggleTool     | Show or hide the widget. |
+| Tool ID            | Component          | Description              |
+|--------------------|--------------------|--------------------------|
+| daylightToggleTool | DaylightToggleTool | Show or hide the widget. |
 
 ## Configuration Reference
 
-``` json
+```json
 "dn_daylight": {
     "Config": {
         "timeSliderSteps": 5,
@@ -22,10 +22,12 @@ To make the functions of this bundle available to the user, the following tool c
         "dateOrSeason": "date",
         "enableShadows": true,
         "visibleElements": {
-             "playButtons": true,
-             "shadowsToggle": true,
-             "datePicker": true,
-             "timezone": false
+            "header": true,
+            "playButtons": true,
+            "datePicker": true,
+            "timezone": false,
+            "sunLightingToggle ": false,
+            "shadowsToggle": false
         }
     }
 }

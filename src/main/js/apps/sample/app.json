@@ -36,10 +36,12 @@
                 "dateOrSeason": "date",
                 "enableShadows": true,
                 "visibleElements": {
+                    "header": true,
                     "playButtons": true,
-                    "shadowsToggle": true,
                     "datePicker": true,
-                    "timezone": false
+                    "timezone": false,
+                    "sunLightingToggle ": false,
+                    "shadowsToggle": false
                 }
             }
         },
