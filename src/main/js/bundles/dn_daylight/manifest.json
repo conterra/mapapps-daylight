@@ -95,12 +95,23 @@
         {
             "name": "Config",
             "impl": "./DaylightWidgetController",
-            "provides": ["dn_daylight.DaylightWidgetController"],
+            "provides": [
+                "dn_daylight.DaylightWidgetController"
+            ],
             "properties": {
+                "dateOrSeason": "date",
+                "enableAmbientOcclusion": false,
+                "enableAtmosphere": true,
+                "enableCameraTracking": true,
+                "enableShadows": true,
+                "enableStars": true,
+                "enableWaterReflection": false,
+                "weather": {
+                    "type": "sunny",
+                    "cloudCover": 0.5
+                },
                 "timeSliderSteps": 5,
                 "playSpeedMultiplier": 1,
-                "dateOrSeason": "date",
-                "enableShadows": true,
                 "visibleElements": {
                     "header": true,
                     "playButtons": true,

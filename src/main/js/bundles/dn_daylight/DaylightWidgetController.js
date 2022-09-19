@@ -33,13 +33,20 @@ export default class DaylightWidgetController {
 
         this._getView().then((view) => {
             view.environment = {
+                starsEnabled: properties.enableStars,
+                atmosphereEnabled: properties.enableAtmosphere,
                 atmosphere: {
                     quality: "high"
                 },
                 lighting: {
+                    type: "sun",
                     date: new Date(),
-                    directShadowsEnabled: properties.enableShadows
-                }
+                    ambientOcclusionEnabled: properties.enableAmbientOcclusion,
+                    cameraTrackingEnabled: properties.enableCameraTracking,
+                    directShadowsEnabled: properties.enableShadows,
+                    waterReflectionEnabled: properties.enableWaterReflection
+                },
+                weather: properties.weather
             };
         });
     }
