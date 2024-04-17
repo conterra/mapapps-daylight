@@ -76,78 +76,35 @@
                 "map": {
                     "layers": [
                         {
-                            "id": "zuerich3d",
-                            "title": "Edge-Rendering",
-                            "url": "https://tiles.arcgis.com/tiles/oPre3pOfRfefL8y0/arcgis/rest/services/LOD2_GEBAEUDE_ZRH/SceneServer",
+                            "id": "buildings",
+                            "title": "${layers.buildings}",
                             "type": "AGS_SCENE",
-                            "popupTemplate": {
-                                "title": "{expression/typ}",
-                                "content": [
-                                    {
-                                        "type": "fields",
-                                        "fieldInfos": [
-                                            {
-                                                "fieldName": "expression/quality"
-                                            },
-                                            {
-                                                "fieldName": "EGID",
-                                                "label": "Eidgenössischer Gebäudeidentifikator"
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "expressionInfos": [
-                                    {
-                                        "name": "typ",
-                                        "expression": "When($feature.ART == 'BB00', 'Verwaltung', $feature.ART == 'BB01', 'Wohngebäude', $feature.ART == 'BB02', 'Land & Forstwirtschaft',$feature.ART == 'BB03', 'Verkehr',$feature.ART == 'BB04', 'Handel',$feature.ART == 'BB05', 'Industrie & Gewerbe',$feature.ART == 'BB06', 'Gastgewerbe',$feature.ART == 'BB07', 'Nebengebäude',$feature.ART == 'EO08', 'Brücke/Passerelle',$feature.ART == 'EO12', 'Pfeiler',$feature.ART == 'EO13', 'Unterstand',$feature.ART == 'EO14', 'Silo/Turm/Gasometer',$feature.ART == 'EO16', 'Hochkamin',$feature.ART == 'EO18', 'Mast/Antenne', 'n/a')"
-                                    },
-                                    {
-                                        "name": "quality",
-                                        "title": "Qualität",
-                                        "expression": "When($feature.QUALITAET_STATUS == 0, 'Qualität nicht eingehalten -> Gebäudehöhe wurde nicht gemessen -> die Baute hat eine generische Höhe von 3m', $feature.QUALITAET_STATUS == 1, 'normale Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt', $feature.QUALITAET_STATUS == 2, 'spezielle Kontrolle -> Gebäudehöhen sind photogrammetrisch bestimmt und speziell kontrolliert', 'n/a')"
-                                    }
-                                ]
-                            },
-                            "renderer": {
-                                "type": "simple",
-                                "symbol": {
-                                    "type": "mesh-3d",
-                                    "symbolLayers": [
-                                        {
-                                            "type": "fill",
-                                            "material": {
-                                                "color": "#ffffff",
-                                                "colorMixMode": "replace"
-                                            },
-                                            "edges": {
-                                                "type": "solid",
-                                                "color": [50, 50, 50, 0.5],
-                                                "size": 1
-                                            }
-                                        }
-                                    ]
-                                }
-                            }
+                            "legendEnabled": false,
+                            "url": "https://services2.arcgis.com/cFEFS0EWrhfDeVw9/arcgis/rest/services/STM____FR_Lyon__Textured_buildings/SceneServer"
                         }
                     ],
                     "ground": [
                         {
-                            "url": "https://scene.arcgis.com/arcgis/rest/services/Zurich_DTM/ImageServer",
-                            "type": "AGS_ELEVATION"
+                            "url": "https://tiles.arcgis.com/tiles/cFEFS0EWrhfDeVw9/arcgis/rest/services/ELEV____FR_Lyon__Elevation/ImageServer",
+                            "type": "ELEVATION"
+                        },
+                        {
+                            "url": "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer",
+                            "type": "ELEVATION"
                         }
                     ]
                 },
                 "view": {
                     "viewmode": "3D",
                     "camera": {
-                        "heading": 338.4613139877434,
-                        "tilt": 65.6626297158947,
+                        "heading": 136.8701794643217,
+                        "tilt": 79.79644625047392,
                         "position": {
-                            "x": 951163.1908125386,
-                            "y": 6002664.875400205,
-                            "z": 793.7736872918904,
+                            "x": 536508.4282291891,
+                            "y": 5742784.271064765,
+                            "z": 365.8990031592548,
                             "spatialReference": {
-                                "wkid": 102100
+                                "wkid": 3857
                             }
                         }
                     }
