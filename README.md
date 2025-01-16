@@ -5,7 +5,7 @@
 
 This bundle enables the user to display the effect of light of certain time of day. Additionally, the shadow of 3D-Objects can be simulated.
 
-![Screenshot App](https://github.com/conterra/mapapps-daylight/blob/master/screenshot.PNG)
+![Screenshot App](https://github.com/conterra/mapapps-daylight/blob/main/screenshot.PNG)
 
 ## Sample App
 https://demos.conterra.de/mapapps/resources/apps/downloads_daylight/index.html
