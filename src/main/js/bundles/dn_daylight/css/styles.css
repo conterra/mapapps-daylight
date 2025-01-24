@@ -17,6 +17,10 @@
     display: none;
 }
 
+.ctAppRoot .esri-daylight.esri-widget {
+    margin-top: 10px;
+}
+
 .ctAppRoot
     .esri-date-picker__calendar
     .esri-date-picker__month-dropdown.esri-select {

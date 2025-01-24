@@ -30,16 +30,12 @@
                 "minimizeOnClose": true,
                 "resizable": false,
                 "marginBox": {
-                    "w": 350,
-                    "h": 250,
+                    "w": 390,
+                    "h": 220,
                     "l": 20,
                     "t": 125
                 },
-                "minSize": {
-                    "w": 350,
-                    "h": 230
-                },
-                "windowClass": "daylight-window noPadding"
+                "windowClass": "daylight-window"
             }
         },
         {
