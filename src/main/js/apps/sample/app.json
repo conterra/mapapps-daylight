@@ -3,29 +3,43 @@
         "title": "${apptitle}"
     },
     "load": {
-        "bundleLocations": ["localbundles", "bundles"],
+        "bundleLocations": [
+            "localbundles",
+            "bundles"
+        ],
         "allowedBundles": [
+            "agssearch",
             "banner",
+            "basemaptoggler",
+            "languagetoggler",
             "locateme",
             "locator-store",
             "map-init",
             "map-preload-3D",
             "mapnavigation",
+            "measurement-3d",
             "notifier",
-            "omnisearch",
+            "parameter-url",
             "popups-default",
+            "printing",
+            "result-ui",
             "scalebar",
+            "search-ui",
+            "selection-ui",
+            "sketching",
             "splashscreen",
             "system",
-            "templatelayout",
             "template-seasons",
-            "theme-everlasting",
+            "templatelayout",
             "theme-autumn",
-            "toolrules",
+            "toc",
             "toolset",
-            "dn_daylight"
+            "dn_daylight",
+            "dn_imprintprivacy"
         ],
-        "i18n": ["bundle"]
+        "i18n": [
+            "bundle"
+        ]
     },
     "bundles": {
         "dn_daylight": {
@@ -53,23 +67,57 @@
                 }
             }
         },
+        "agssearch": {
+            "AutoStoreRegistration": {
+                "componentEnabled": true
+            }
+        },
         "banner": {
             "BannerWidget": {
                 "label": "Developer Network",
+                "image": "resource('${app}:/assets/logo.svg')",
+                "imageWidth": 150,
                 "imagePosition": "above",
-                "image": "resource('${app}:/images/logo_conterra.png')",
-                "imageWidth": 200,
-                "link": "https://developernetwork.conterra.de"
+                "link": "http://conterra.github.io"
+            }
+        },
+        "basemaptoggler": {
+            "Config": {
+                "itemStyles": {
+                    "gray": "icon-thumbnail",
+                    "streets": "icon-thumbnail",
+                    "satellite": "icon-thumbnail",
+                    "hybrid": "icon-thumbnail"
+                }
             }
         },
         "map-init": {
             "Config": {
                 "basemaps": [
                     {
-                        "id": "topo",
-                        "title": "Topo",
-                        "selected": true,
-                        "basemap": "topo-vector"
+                        "id": "gray",
+                        "basemap": "gray-vector",
+                        "title": "${map.basemaps.gray}",
+                        "thumbnailUrl": "resource('${app}:/assets/gray.png')",
+                        "selected": true
+                    },
+                    {
+                        "id": "streets",
+                        "basemap": "streets-vector",
+                        "title": "${map.basemaps.streets}",
+                        "thumbnailUrl": "resource('${app}:/assets/streets.png')"
+                    },
+                    {
+                        "id": "satellite",
+                        "basemap": "satellite",
+                        "title": "${map.basemaps.topo}",
+                        "thumbnailUrl": "resource('${app}:/assets/topo.png')"
+                    },
+                    {
+                        "id": "hybrid",
+                        "basemap": "hybrid",
+                        "title": "${map.basemaps.hybrid}",
+                        "thumbnailUrl": "resource('${app}:/assets/hybrid.png')"
                     }
                 ],
                 "map": {
@@ -110,46 +158,10 @@
                 }
             }
         },
-        "templates": {
-            "TemplateModel": {
-                "_templates": [
-                    {
-                        "name": "seasons",
-                        "widgets": [
-                            {
-                                "widgetRole": "drawer_button",
-                                "attachTo": "map_topleft",
-                                "props": {
-                                    "layoutIndex": 0
-                                }
-                            },
-                            {
-                                "widgetRole": "legend",
-                                "sublayout": [
-                                    "mobile_portrait",
-                                    "mobile_landscape"
-                                ],
-                                "window": {
-                                    "dockable": false,
-                                    "dockingBar": null
-                                }
-                            },
-                            {
-                                "widgetRole": "banner",
-                                "sublayout": ["mobile_portrait"],
-                                "attachTo": "header_right"
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-        "themes": {
-            "ThemeModel": {
-                "_selectedTheme": "autumn"
-            },
-            "ThemeSelector": {
-                "componentEnabled": true
+        "toc": {
+            "Config": {
+                "showBasemaps": true,
+                "showLayerLegend": true
             }
         },
         "toolset": {
@@ -163,21 +175,104 @@
                             "zoomInTool",
                             "zoomOutTool",
                             "compassTool",
-                            "restoreInitialViewTool"
+                            "restoreInitialViewTool",
+                            "viewmodeSwitcherTool"
                         ],
                         "registerWidget": {
                             "widgetRole": "mapview_tools"
                         },
                         "container": "ignore",
                         "windowType": "container",
-                        "cssClass": "muted"
+                        "cssClass": "muted",
+                        "tooltipPositions": [
+                            "before",
+                            "above",
+                            "below",
+                            "after"
+                        ]
+                    },
+                    {
+                        "id": "drawer_left",
+                        "title": "${tools.drawerLeft}",
+                        "cssClass": "ct-main-app-menu",
+                        "tools": [
+                            "selection-ui-tool",
+                            "sketchToggleTool",
+                            "measuring_tools",
+                            "printingToggleTool"
+                        ],
+                        "registerWidget": {
+                            "widgetRole": "drawer_button"
+                        },
+                        "container": "ignore",
+                        "windowType": "drawer_left",
+                        "tooltipPositions": [
+                            "after",
+                            "above",
+                            "below",
+                            "before"
+                        ]
+                    },
+                    {
+                        "id": "measuring_tools",
+                        "title": "${tools.measuring}",
+                        "iconClass": "icon-editor-table",
+                        "tools": [
+                            "distanceMeasurement3DToggleTool",
+                            "areaMeasurement3DToggleTool"
+                        ],
+                        "container": "ignore",
+                        "registerTool": true,
+                        "windowType": "menuitem",
+                        "tooltipPositions": [
+                            "after"
+                        ]
                     }
                 ]
             }
         },
         "toolrules": {
             "ToolActiveStateManager": {
-                "activateOnStartToolIds": ["daylightToggleTool"]
+                "activateOnStartToolIds": [
+                    "daylightToggleTool"
+                ]
+            }
+        },
+        "dn_imprintprivacy": {
+            "ToolHandler": {
+                "imprintUrls": [
+                    {
+                        "locale": "de",
+                        "url": "https://www.conterra.de/impressum"
+                    },
+                    {
+                        "locale": "en",
+                        "url": "https://www.con-terra.com/imprint"
+                    }
+                ],
+                "privacyUrls": [
+                    {
+                        "locale": "de",
+                        "url": "https://www.conterra.de/datenschutzhinweise"
+                    },
+                    {
+                        "locale": "en",
+                        "url": "https://www.con-terra.com/privacy-statements"
+                    }
+                ],
+                "toolsetDefinition": {
+                    "id": "imprintprivacyToolset",
+                    "tools": [
+                        "imprintTool",
+                        "privacyStatementsTool"
+                    ],
+                    "registerWidget": {
+                        "widgetRole": "footer_right"
+                    },
+                    "container": "ignore",
+                    "windowType": "container",
+                    "cssClass": "showToolLabels"
+                }
             }
         }
     }
