@@ -7,7 +7,7 @@ This bundle enables the user to display the effect of light of certain time of d
 ![Screenshot App](https://github.com/conterra/mapapps-daylight/blob/main/screenshot.PNG)
 
 ## Sample App
-https://demos.conterra.de/mapapps/resources/apps/downloads_daylight/index.html
+https://demos.conterra.de/mapapps/resources/apps/public_demo_daylight/index.html
 
 ## Installation Guide
 
