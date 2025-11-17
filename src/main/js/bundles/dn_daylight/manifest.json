@@ -4,19 +4,23 @@
     "title": "${bundleName}",
     "description": "${bundleDescription}",
     "vendor": "con terra GmbH",
-    "keywords": ["sample"],
+    "keywords": [
+        "sample"
+    ],
     "icon": {},
     "productName": "devnet-mapapps-daylight",
     "dependencies": {
-        "esri": "^4.14.0",
-        "esri-widgets": "^4.9.0",
-        "map-widget": "^4.9.0",
-        "apprt-binding": "^4.9.0"
+        "@arcgis/core": "^4.33.0",
+        "esri-widgets": "^4.20.0",
+        "map-widget": "^4.20.0",
+        "apprt-binding": "^4.20.0"
     },
-    "CSS-Themes-Extension": [
+    "cssThemesExtension": [
         {
             "name": "*",
-            "files": ["./css/styles.css"]
+            "files": [
+                "./css/styles.css"
+            ]
         }
     ],
     "layout-widgets": [
@@ -40,7 +44,10 @@
         },
         {
             "widgetRole": "daylightWidget",
-            "sublayout": ["mobile_landscape", "mobile_portrait"],
+            "sublayout": [
+                "mobile_landscape",
+                "mobile_portrait"
+            ],
             "window": {
                 "dockingBar": "${id}-dockingBarBottomLeft",
                 "draggable": false,
@@ -58,7 +65,9 @@
         },
         {
             "widgetRole": "daylightWidget",
-            "sublayout": ["mobile_landscape"],
+            "sublayout": [
+                "mobile_landscape"
+            ],
             "window": {
                 "marginBox": {
                     "h": 250,
@@ -72,7 +81,10 @@
     "components": [
         {
             "name": "DaylightWidgetFactory",
-            "provides": ["dijit.Widget", "dn_daylight.DaylightWidgetFactory"],
+            "provides": [
+                "dijit.Widget",
+                "dn_daylight.DaylightWidgetFactory"
+            ],
             "instanceFactory": true,
             "properties": {
                 "widgetRole": "daylightWidget"
@@ -127,7 +139,9 @@
         {
             "name": "DaylightToggleTool",
             "impl": "ct/tools/Tool",
-            "provides": ["ct.tools.Tool"],
+            "provides": [
+                "ct.tools.Tool"
+            ],
             "propertiesConstructor": true,
             "properties": {
                 "id": "daylightToggleTool",
